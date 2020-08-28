@@ -1,0 +1,154 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background: #EEF8FF; */
+    font-family: url('data/fonts/Roboto-Regular.ttf');
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.navbar {
+    background: #454BF8;
+    width: 100%;
+    margin: 0 0;
+}
+
+.jumbo {
+    text-align: left;
+    /* background: #78E3FD; */
+    /* color: white; */
+    font-family: url('data/fonts/Roboto-Medium.ttf');
+    font-size: 30px;
+    width: 100%;
+    /* height: 500px; */
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* The animation code */
+
+
+.jumbo div {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 6%;
+}
+
+.jumbo div span {
+    color: #454BF8;
+    font-size: 40px;
+}
+
+#infoSection {
+    background: rgba(0, 0, 0, 0);
+}
+
+.project span {
+    animation-name: slideIn;
+    animation-duration: 2s;
+    text-align: center;
+    display: block;
+    background: white;
+    margin: 1px;
+    height: 200px;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    color: darkgrey;
+}
+.project span h4 {
+    color: rgb(124, 124, 124);
+}
+
+.project span p {
+    padding-top: 25px;
+    font-size: 30px;
+    color: #454BF8;
+}
+
+.row .col a {
+    color: white;
+    transition: all 0.2s;
+}
+
+.row .col a:hover {
+    color: rgb(180, 180, 180);
+    transition: all 0.2s;
+}
+
+.post {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.post h3 {
+    color: #454BF8;
+}
+
+
+/* ------------ */
+
+body {
+    margin:0px;
+  }
+.colour-block {
+    background: #454BF8;
+    /* width:60%; */
+    padding:7% 20% 10% 20%;
+    color:#fff;
+}
+.white-block {
+    background:#fff;
+    /* width: 60%; */
+    padding:7% 20% 10% 20%;
+    color:#454BF8;
+}
+h1 {
+    text-align:center;
+    font-size:80px;
+    /* font-family:'wire one', serif; */
+    font-weight:normal;
+}
+p {
+    font-size:20px;
+    /* font-family:'Raleway', serif; */
+}
+
+#navbarWrap {
+    text-align: center;
+    width: 100%;
+    background: #454BF8;
+}
+
+
+/*------------------*/
+/*  SKEW CLOCKWISE  */
+/*------------------*/
+.skew-cc{
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    background: linear-gradient(to right bottom, #454BF8 49%, #fff 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
+}
+
+
+/*-------------------------*/
+/* SKEW COUNTER CLOCKWISE  */
+/*-------------------------*/
+.skew-c{
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    background: linear-gradient(to left bottom, #fff 49%, #454BF8 50%);
+}
