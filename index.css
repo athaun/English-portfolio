@@ -105,6 +105,7 @@ body {
     /* width:60%; */
     padding:7% 20% 10% 20%;
     color:#fff;
+    width: 100%;
 }
 .white-block {
     background:#fff;
@@ -136,9 +137,9 @@ p {
 .skew-cc{
     width:100%;
     height:100px;
-    position:absolute;
+    position:relative;
     left:0px;
-    background: linear-gradient(to right bottom, #454BF8 49%, #fff 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
+    background: linear-gradient(to right bottom, #454BF8 49%, #fff 50%), linear-gradient(-50deg, #ffffff 16px, #000 0);
 }
 
 
@@ -148,7 +149,7 @@ p {
 .skew-c{
     width:100%;
     height:100px;
-    position:absolute;
+    position:relative;
     left:0px;
     background: linear-gradient(to left bottom, #fff 49%, #454BF8 50%);
 }
