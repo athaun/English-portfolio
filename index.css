@@ -12,6 +12,7 @@ body {
     font-family: url('data/fonts/Roboto-Regular.ttf');
     animation-name: fadeIn;
     animation-duration: 2s;
+    text-align: center;
 }
 
 .navbar {
@@ -51,19 +52,26 @@ body {
     background: rgba(0, 0, 0, 0);
 }
 
+.project {
+    text-align: center;
+    width: 230px;
+}
+
 .project span {
     animation-name: slideIn;
     animation-duration: 2s;
     text-align: center;
     display: block;
     background: white;
-    margin: 1px;
     height: 200px;
     padding: 30px;
     border-radius: 10px;
     font-size: 16px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     color: darkgrey;
+    width: 230px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 .project span h4 {
     color: rgb(124, 124, 124);
@@ -88,6 +96,7 @@ body {
 .post {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     background: white;
+    text-align:left;
 }
 
 .post h3 {
@@ -152,4 +161,74 @@ p {
     position:relative;
     left:0px;
     background: linear-gradient(to left bottom, #fff 49%, #454BF8 50%);
+}
+
+/* Tooltips */
+
+.tooltip {
+display: inline-block;
+opacity: 1;
+font-size: 30px;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 200px;
+background-color: #36393f;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 3px;
+position: absolute;
+z-index: 1;
+bottom: 100%;
+left: 50%;
+margin-left: -100px;
+font-size: 16px;
+
+/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+opacity: 0;
+transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+opacity: 1;
+}
+
+#mrShow {
+    display: none;
+}
+
+@media only screen and (max-width: 1120px) {
+    #mr {
+        display: none;
+    }
+    #mrShow {
+        display: block;
+    }
+    #aboutMe > p:nth-child(3) {
+        width: 100%;
+        margin: 0;
+        font-size: 16px;
+    }
+    #aboutMe > h1:nth-child(1), #projects > h1:nth-child(1) {
+        font-size: 60px;
+    }
+
+    #aboutMe, div.colour-block:nth-child(5), .jumbo{
+        width: 100%;
+        margin: 0px;
+        padding: 20px;
+    }
+
+    .white-block > h1:nth-child(1) {
+        font-size: 40px;
+        height: 60px;
+        margin-bottom: 70px;
+    }
+
+    .post h3 {
+        font-size: 23px;
+    }
 }
