@@ -33,6 +33,21 @@ body {
     margin: 0 auto;
 }
 
+
+.mainBtn {
+    width:140px; 
+    background: white;
+    border: 2px solid #454BF8;
+    color: #454BF8 !important;
+    transition: all 0.5s;    
+}
+
+.mainBtn:hover {
+    background: #454BF8;
+    color: white !important;
+    transition: all 0.5s ease;
+}
+
 /* The animation code */
 
 
@@ -94,7 +109,7 @@ body > div:nth-child(8) > div > div > div:nth-child(3) > div > a {
     text-decoration: none;
 }
 
-.project span h4 {
+.project span h4, .project span h3 {
     color: rgb(124, 124, 124);
 }
 
@@ -125,8 +140,10 @@ body > div:nth-child(8) > div > div > div:nth-child(3) > div > a {
     color: #454BF8;
 }
 
-.top {
+#top {
     margin-top: -100px;
+    width: 60%;
+    border-radius: 5px;
 }
 
 /* ------------ */
