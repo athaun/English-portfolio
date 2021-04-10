@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+
+
+
+-->
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Remix Project | ENGL 1302</title>
+        <link rel="stylesheet" href="main.css">
+        <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://kit.fontawesome.com/2373daf023.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="chat main">
+            <div class="messages"></div>
+
+            <div id="inputBox">
+                <div class="search-container">
+                    <form id="messageForm" autocomplete="off">
+                        <input type="text" placeholder="Type message" id="box">
+                    </form>
+                </div>
+            </div> 
+        </div>
+        
+
+        <div class="sidenav">
+
+            <h3><i class="fas fa-user-friends"></i> Contacts</h3>
+
+            <div class="friend selected">
+                <span class="userIcon" style="background:#00c4e6;"><i class="fas fa-user"></i></span>
+                <h3>Asher Haun <span class="timestamp" id="updateTime">October 31, 1517</span></h3>
+                <p>I am going to be nailing some stuff to the Church doors in an hour.</p>
+            </div>
+            
+            <div class="friend">
+                <span><img src="images/MartinLuther.png" class="userIconImg"></span>
+                <h3>Martin Luther <span class="timestamp"></span></h3>
+                <p>...</p>
+            </div>
+            
+            <div class="friend">
+                <span class="userIcon" style="background:rgb(173, 127, 211);"><i class="fas fa-user"></i></span>
+                <h3>Dave Roos <span class="timestamp"></span></h3>
+                <p>A Historian</p>
+            </div>
+            
+            <div class="friend">
+                <span><img src="images/bigMinion.png" class="userIconImg"></span>
+                <h3>Minion <span class="timestamp"></span></h3>
+                <p>...</p>
+            </div>
+            
+            <div class="friend">
+                <span><img src="images/penguin.png" class="userIconImg"></span>
+                <h3>The Great Statistician <span class="timestamp"></span></h3>
+                <p>...</p>
+            </div>
+
+            <div class="friend" id="conclusion">
+                <span class="userIcon" style="background:rgb(101, 125, 230);"><i class="fas fa-user"></i></span>
+                <h3>Conclusion<span class="timestamp"></span></h3>
+                <p>...</p>
+            </div>
+
+            <div class="friend" id="credits">
+                <span class="userIcon" style="background:rgb(158, 19, 61);"><i class="fas fa-user"></i></span>
+                <h3>Credits<span class="timestamp"></span></h3>
+                <p>...</p>
+            </div>
+
+
+        </div>
+        <div class="topBar">
+            <h2>Asher Haun</h2>
+        </div>
+
+        <script src="spawner.js"></script>
+        <script src="messageManager.js"></script>
+        <script src="presentation.js"></script>
+
+    </body>
+</html>
