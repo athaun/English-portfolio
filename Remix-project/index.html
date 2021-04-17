@@ -31,7 +31,7 @@
         </div>
         
 
-        <div class="sidenav">
+        <div class="sidenav" id="contactsMenu">
 
             <h3><i class="fas fa-user-friends"></i> Contacts</h3>
 
@@ -79,6 +79,9 @@
 
 
         </div>
+
+        <button id="contactsMobile"><i class="fas fa-user"></i> Contacts</button>
+
         <div class="topBar">
             <h2>Asher Haun</h2>
         </div>
@@ -109,14 +112,18 @@
         <script src="messageManager.js"></script>
         <script src="presentation.js"></script>
         <script>
-            // $("#modal").hide()
+            $("#modal").hide()
             $("#modal2").hide()
-            $("#closeBtn").click(function () {
+            $("#closeBtn").click(f => {
                 $("#modal").hide()
             })
 
-            $("#closeBtn2").click(function () {
+            $("#closeBtn2").click(f => {
                 $("#modal2").hide()
+            })
+
+            $("#contactsMobile").click(f => {
+                $("#contactsMenu").toggleClass("show")
             })
         </script>
 

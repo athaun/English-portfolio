@@ -20,10 +20,10 @@ function setThread (t) {
 
 function threadClickable (t) {
     if (clickableThreads[t] == null || clickableThreads[t] == false) {
-        console.log(false)
+        // console.log(false)
         return false
     }
-    console.log(true)
+    // console.log(true)
     return true
 }
 
@@ -52,6 +52,10 @@ $(".friend").click(function(e) {
         console.log("Denied access to thread " + e)
         $("#modal2").show()
         return
+    }
+
+    if ($("#contactsMenu").hasClass("show")) {
+        $("#contactsMenu").toggleClass("show")    
     }
 
     document.querySelector("body > div.topBar > h2").innerHTML = name

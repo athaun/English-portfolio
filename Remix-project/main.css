@@ -327,6 +327,12 @@ input:focus {
     outline: none;
 }
 
+@media screen and (min-width: 921px) {
+    #contactsMobile {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 920px) {
     .sidenav {
         display: none;
@@ -345,6 +351,47 @@ input:focus {
     #inputBox {
         width: 100%;
         padding-left: 0px;
+    }
+    
+
+    .sidenav:not(.show) {
+        display: block;
+        z-index: 0;
+        opacity: 0;
+        transition: all 0.4s ease;
+        position: absolute !important;
+        top: -999px !important;
+        left: -999px !important;
+    }
+
+    .sidenav.show {
+        width: 100%;
+        display: block;
+        z-index: 5;
+        opacity: 1;
+        transition: all 0.4s ease;
+    }
+
+    /* .sidenav.show  */
+
+    /* .sidenav.show > div.friend.selected */
+
+    #contactsMobile {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        background: #007fd7;
+        border: none;
+        transition: all 0.4s;
+        border-radius: 50px;
+        top:0; 
+        left:0;
+        display: block;
+        position: fixed;
+        font-size: 15px;
+        padding: 13px;
+        border: none;
+        color: white;
+        margin: 11px;
+        z-index: 6;
     }
 }
 
@@ -375,7 +422,7 @@ input:focus {
     border-radius: 20px;
 }
 
-#startPresentation:hover, #closeBtn:hover, #closeBtn2:hover {
+#startPresentation:hover, #closeBtn:hover, #closeBtn2:hover, #contactsMobile:hover {
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.4s;
@@ -389,7 +436,7 @@ input:focus {
 /* The Modal (background) */
 #modal, #modal2 {
     position: fixed; /* Stay in place */
-    z-index: 4; /* Sit on top */
+    z-index: 40; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -407,6 +454,7 @@ input:focus {
     border-radius: 15px;
     width: 50%;
     max-width: 790px;
+    min-width: 300px;
 }
 
 .modal-content p {
@@ -424,3 +472,23 @@ input:focus {
 .friend.disabled {
     color: rgb(102, 102, 102);
 }
+
+@media only screen and (max-width: 700px) {
+
+      .modal-content {
+        width: 100%;
+        /* height: ; */
+      }
+
+      .modal-content p {
+        width: 77%;
+        margin: 0 auto;
+    }
+  }
+
+  /* 
+  
+  MOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILE
+  
+  
+  */
