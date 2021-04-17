@@ -353,6 +353,14 @@ input:focus {
         padding-left: 0px;
     }
     
+    .chat {
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
 
     .sidenav:not(.show) {
         display: block;
