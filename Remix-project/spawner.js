@@ -1,5 +1,7 @@
 // Todo: change wording of yours to them, and last to first (for message tails)
 
+let createNewParentOnClick = false
+
 let lastMessage
 let selectedFriend = document.querySelector(".friend.selected")
 let selectedFriendName = selectedFriend.innerHTML.slice(0, selectedFriend.childNodes[3].innerHTML.indexOf("<span")).trim()
@@ -53,23 +55,32 @@ function spawnMessageParent(sender, lastParent, thread) {
         return p.classList.contains(className)
     }
     
-    // Use the last message parent if its owner is the same as the current sender
-    if (pContains(lastParent, sender) && thread == lastThread) {
-        // If the last globally stored message parent is from the local sender, and is in the same thread, then use it
-        messageParent = lastParent
-        findObjectByKey(threads, 'name', thread).lastParent = messageParent
-    } else if (findObjectByKey(threads, 'name', thread).lastParent != null) {
-        if (pContains(findObjectByKey(threads, 'name', thread).lastParent, sender)) {
-            // If this thread has a last parent stored locally, then use it instead
-            messageParent = findObjectByKey(threads, 'name', thread).lastParent
-            findObjectByKey(threads, 'name', thread).lastParent = messageParent
-        }
-    } else {
-        // If there is no last parent to use, create a new parent
+    if (createNewParentOnClick) {
+        // If for some reason those checks above failed, create a new message parent
         messageParent = document.createElement("DIV")
         messageParent.classList.add(sender)
         messageParent.classList.add("messages")
         findObjectByKey(threads, 'name', thread).lastParent = null
+        createNewParentOnClick = false
+    } else {
+        // Use the last message parent if its owner is the same as the current sender
+        if (pContains(lastParent, sender) && thread == lastThread) {
+            // If the last globally stored message parent is from the local sender, and is in the same thread, then use it
+            messageParent = lastParent
+            findObjectByKey(threads, 'name', thread).lastParent = messageParent
+        } else if (findObjectByKey(threads, 'name', thread).lastParent != null) {
+            if (pContains(findObjectByKey(threads, 'name', thread).lastParent, sender)) {
+                // If this thread has a last parent stored locally, then use it instead
+                messageParent = findObjectByKey(threads, 'name', thread).lastParent
+                findObjectByKey(threads, 'name', thread).lastParent = messageParent
+            }
+        } else {
+            // If there is no last parent to use, create a new parent
+            messageParent = document.createElement("DIV")
+            messageParent.classList.add(sender)
+            messageParent.classList.add("messages")
+            findObjectByKey(threads, 'name', thread).lastParent = null
+        }
     }
 
     if (messageParent == null) {
@@ -77,11 +88,16 @@ function spawnMessageParent(sender, lastParent, thread) {
         messageParent = document.createElement("DIV")
         messageParent.classList.add(sender)
         messageParent.classList.add("messages")
-        findObjectByKey(threads, 'name', thread).lastParent = null
+        findObjectByKey(threads, 'name', thread).lastParent =  null
     }   
 
     return messageParent
 }
+
+$(".friend").click(f => {
+    // $(".message").remove()
+    createNewParentOnClick = true
+})
 
 function spawnMessageChild(str, sender, lastParent, thread) {
     var message = document.createElement("DIV")
