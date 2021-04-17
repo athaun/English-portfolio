@@ -1,4 +1,4 @@
-let dev = true;
+let dev = false;
 
 let currentThread = []
 let clickableThreads = []
@@ -81,7 +81,7 @@ $("#messageForm").submit(function(e) {
         if (message == "/help") {
             spawnMessage("/help", "mine", selectedFriendName)
             spawnMessage(`
-            These commands are for debugging purposes.
+            <h3>Command list:</h3>
             <table class="tg">
                 <tbody>
                     <tr>
@@ -102,14 +102,14 @@ $("#messageForm").submit(function(e) {
                     </tr>
                     <tr>
                         <td class="tg-0lax">/dev</td>
-                        <td class="tg-0lax">Removes timer from automatic messages</td>
+                        <td class="tg-0lax">Toggles timer for automatic messages</td>
                     </tr>
                     <tr>
                         <td class="tg-0lax">/restart</td>
                         <td class="tg-0lax">Restarts the presentation</td>
                     </tr>
                 </tbody>
-            </table>
+            </table><br>
             `, "them", selectedFriendName)
         } else if (message.startsWith("/lorem them")) {
             spawnMessage(lorem, "them", selectedFriendName)

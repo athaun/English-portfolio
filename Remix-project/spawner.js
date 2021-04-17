@@ -37,7 +37,6 @@ var pingSound = new Audio("notif.mp3")
 
 function spawnMessageParent(sender, lastParent, thread) {
 
-
     var messagesParents = $(".messages")
     var lastParent = messagesParents[messagesParents.length - 1]
 

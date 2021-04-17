@@ -54,7 +54,7 @@ $("#startPresentation").click(async () => {
     spawnMessage("start", mine, asher)
 
     await sleep(.4, 0)
-    spawnMessage("All of the messages in this presentation are automatic, so if you type something and get a dumb response it is because I have no idea how to code a context aware AI :D", them, asher)
+    spawnMessage("All of the messages in this remix project are automatic. Type \"/help\" for a list of commands you can send to play around with the chat system.", them, asher)
 
     await sleep(4, 0)
     spawnMessage("The best way to follow the presentation is in order from Martin Luther all the way to texting.", them, asher)
@@ -80,7 +80,7 @@ $("body > div.sidenav > div:nth-child(3)").click(async () => {
     spawnMessage("Hey", them, martin)
 
     await sleep(1.5, t)
-    spawnMessage("I am heading into town today to nail a few ideas to the doors of the Castle Church.", them, martin)
+    spawnMessage("I am heading into town today to nail a few ideas I had to the doors of the Castle Church.", them, martin)
 
     await sleep(2.3, t)
     spawnMessage("You know they don't like ideas, right?", mine, martin)
@@ -107,19 +107,19 @@ $("body > div.sidenav > div:nth-child(4)").click(async () => {
     spawnMessage("Hi, I am Dave Roos, a writer for History.com", them, roos)
 
     await sleep(2.6, t)
-    spawnMessage("Don't worry about the timeline here, I can talk to you at the same time as Martin even though I am in 2019, he is in 1517, and you are in 2021.", them, roos)
+    spawnMessage("I know you were just talking to Martin Luther. Don't worry about the timeline here, he is in 1517 AD, and even though I am in 2019 and you are in 2021, we can still talk.", them, roos)
 
     await sleep(3.5, t)
-    spawnMessage("Here is a picture of Martin I found from genius.com:", them, roos)
+    spawnMessage("Here is a picture I found of Luther when he was nailing his 95 theses (or as he says \"A few ideas\") to the door of Castle Church in Germany.", them, roos)
     
-    await sleep(1, t)
+    await sleep(2, t)
     spawnMessage("<img src='images/nailing.png' width='170px'>", them, roos)
 
-    await sleep(6, t)
+    await sleep(7, t)
     spawnMessage("It was taken just a few hours after he told you he was heading into town.", them, roos)
 
     await sleep(2.4, t)
-    spawnMessage("That day, he sparked a revolution in Christianity, but perhaps unknowingly, he also transformed the German language.", them, roos)
+    spawnMessage("That day, he sparked a revolution in Christianity, but perhaps unknowingly, he also sparked a transformation of the German language.", them, roos)
 
     await sleep(2.4, t)
     spawnMessage("\"Thanks to the printing press and the timely power of his message, Luther became the world’s first best-selling author\"", them, roos)
@@ -133,11 +133,8 @@ $("body > div.sidenav > div:nth-child(4)").click(async () => {
     await sleep(4.4, t)
     spawnMessage("His ideas, along with the standardized printing of the Bible on printing presses gave Germans a single standardized German that they could all speak, read, and write.", them, roos)
 
-    await sleep(5, t)
-    spawnMessage("This is how my friend, Grigor Bahhdadaryan, puts it:", them, roos)
-    await sleep(3.4, t)
-    spawnMessage(`“Historically, technological advances [tend] to increase the social and economic phenomena to
-    talk about thus requiring new words, new phrases or semantic expansion of old words and phrases”`, them, roos)
+    await sleep(4.7, t)
+    spawnMessage("The use of the recently invented (for the time) printing press was a major part of unifying the German language.", them, roos)
 
     await sleep(3, t)
     cont(minion, roos)
@@ -152,7 +149,12 @@ $("body > div.sidenav > div:nth-child(5)").click(async () => {
     if (clickedMinion || !threadClickable(t)) {
         return
     }
+
+    
     await sleep(.6, t)
+    spawnMessage("👋", them, minion)
+
+    await sleep(1, t)
     spawnMessage("Hi, I am a robotic minion that Asher made to talk for him.", them, minion)
 
     await sleep(2.8, t)
@@ -175,7 +177,7 @@ $("body > div.sidenav > div:nth-child(5)").click(async () => {
     spawnMessage("^^ Soon enough it evolved into a publicly available network. Albiet quite noisy and slow if you wanted to connect.", them, minion)
 
     await sleep(8, t)
-    spawnMessage("Finally, the internet became what we know and love today", them, minion)
+    spawnMessage("Finally, the internet became what we know and ❤️ today", them, minion)
 
     await sleep(3, t)
     cont(stats, minion)
@@ -232,8 +234,15 @@ $("#conclusion").click(async () => {
     if (clickedConclusion || !threadClickable(t)) {
         return
     }
+
     await sleep(.6, t)
-    spawnMessage("Much more can be said, however I think that the main takeway is that the limitations and or features of technology push us to change the way we communicate with others. Whether that means using abbreviations in lew of full words and phrases, or making up new ones, the medium changes the language.", them, conclusion)
+    spawnMessage("The medium picked for this artifact was quite intentional. I created a texting application to show how by modifying my language, I can communicate the same message as a 5 page research paper via a completely new medium; to do so, I have had to modify the way I communicate with you—Instead of a structured essay: composed, refined, and scrutinzed, here, I can use emojies, gifs, images, and minions to communicate the same message.", them, conclusion)
+
+    // await sleep(4.6, t)
+    // spawnMessage("From the printing press, Luther, and German, to texting and texting language, langua", them, conclusion)
+
+    await sleep(4.6, t)
+    spawnMessage("Much more can be said, however I believe that the main takeway is that the limitations and or features of technology push us to change the way we communicate with others. Whether that means using abbreviations in lew of full words and phrases, or making up new ones, the medium changes the language.", them, conclusion)
 
     await sleep(4.6, t)
     spawnMessage(`  Until next time...
@@ -261,6 +270,10 @@ $("#credits").click(async () => {
 
     await sleep(.6, t)
     spawnMessage(`The source code for this project is available on <a href="https://github.com/athaun/English-portfolio">Github</a>`, them, credits)
+
+    await sleep(.6, t)
+    spawnMessage(`Return to portfolio <a href="https://athaun.tech/English-portfolio">Home Page</a>`, them, credits)
+    
 
     await sleep(.6, t)
     spawnMessage(`Coded with ❤️ by Asher Haun`, them, credits)
