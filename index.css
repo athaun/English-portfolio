@@ -94,7 +94,7 @@ body > div:nth-child(8) > div {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 30px;
-    width: 230px;   
+    /* width: 230px;    */
 }
 
 body > div:nth-child(8) > div > div > div:nth-child(3) > div > a {
