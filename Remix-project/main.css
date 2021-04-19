@@ -401,6 +401,11 @@ input:focus {
         margin: 11px;
         z-index: 6;
     }
+
+    body > div.topBar > h2 {
+        float: right;
+        margin-right: 20px;
+    }
 }
 
 .hide {
