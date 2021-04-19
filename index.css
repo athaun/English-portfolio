@@ -149,7 +149,7 @@ body > div:nth-child(8) > div > div > div:nth-child(3) > div > a {
 
 #top {
     margin-top: -100px;
-    width: 60%;
+    /* width: 60%; */
     max-width: 1140px;
     border-radius: 5px;
 }
@@ -285,5 +285,12 @@ transition: opacity 1s;
 
     .post p {
         font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .jumotron, .container, .post {
+        max-width: 90%;
+        width: 90%;
     }
 }
