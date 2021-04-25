@@ -33,6 +33,9 @@ body {
     margin: 0 auto;
 }
 
+.jumbotron p {
+    line-height: 2;
+}
 
 .mainBtn {
     width:140px; 
