@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: #2D2D30;
+    background: #2e2e2e;
     font-family: url('data/fonts/Roboto-Regular.ttf');
     animation-name: fadeIn;
     animation-duration: 2s;
@@ -16,7 +16,7 @@ body {
 }
 
 .navbar {
-    background: #007ACC;
+    background: #2d6273;
     width: 100%;
     margin: 0 0;
 }
@@ -39,8 +39,8 @@ body {
 
 .mainBtn {
     width:140px; 
-    background: #2D2D30;
-    border: 2px solid #007ACC;
+    background: #2e2e2e;
+    border: 2px solid #2d6273;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
     /* border: 2px solid rgb(59, 59, 59); */
@@ -49,7 +49,7 @@ body {
 }
 
 .mainBtn:hover {
-    background: #007ACC;
+    background: #2d6273;
     color: white !important;
     transition: all 0.5s ease;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .jumbo div span {
-    color: #007ACC;
+    color: #2d6273;
     font-size: 40px;
 }
 
@@ -87,9 +87,9 @@ body > div:nth-child(8) > div {
     padding: 30px;
     border-radius: 10px;
     font-size: 16px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-
-    border: 2px solid rgb(59, 59, 59);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    /* background: #2d6273; */
+    border: 2px solid #2d6273;
 
     color: white;
     text-decoration: none;
@@ -115,16 +115,19 @@ body > div:nth-child(8) > div > div > div:nth-child(3) > div > a {
     transition: all 0.2s;
     cursor: pointer;
     text-decoration: none;
+    color: white;
+    padding: 20px;
 }
 
 .project span h4, .project span h3 {
     color: lightgrey;
+    color: white;
 }
 
 .project span p {
     padding-top: 25px;
     font-size: 30px;
-    color: #007ACC;
+    color: #2d6273;
 }
 
 
@@ -134,7 +137,7 @@ body > div:nth-child(8) > div > div > div:nth-child(3) > div > a {
 }
 
 .row .col a:hover {
-    color: rgb(180, 180, 180);
+    /* color: rgb(180, 180, 180); */
     transition: all 0.2s;
 }
 
@@ -142,12 +145,12 @@ body > div:nth-child(8) > div > div > div:nth-child(3) > div > a {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     color: rgb(231, 231, 231);
     border: 2px solid rgb(59, 59, 59);
-    background: #2D2D30;
+    background: #2e2e2e;
     text-align:left;
 }
 
 .post h3 {
-    color: #4cabeb;
+    color: #2d6273;
 }
 
 #top {
@@ -167,17 +170,17 @@ body {
     margin:0px;
   }
 .colour-block {
-    background: #007ACC;
+    background: #2d6273;
     /* width:60%; */
     padding:7% 20% 10% 20%;
-    /* color:#2D2D30; */
+    /* color:#2e2e2e; */
     width: 100%;
 }
 .white-block {
-    background:#2D2D30;
+    background:#2e2e2e;
     /* width: 60%; */
     padding:7% 20% 10% 20%;
-    color:#007ACC;
+    color:#2d6273;
 }
 h1 {
     text-align:center;
@@ -193,7 +196,7 @@ p {
 #navbarWrap {
     text-align: center;
     width: 100%;
-    background: #007ACC;
+    background: #2d6273;
 }
 
 
@@ -205,7 +208,7 @@ p {
     height:100px;
     position:relative;
     left:0px;
-    background: linear-gradient(to right bottom, #007ACC 49%, #2D2D30 50%), linear-gradient(-50deg, #2D2D30 16px, #000 0);
+    background: linear-gradient(to right bottom, #2d6273 49%, #2e2e2e 50%), linear-gradient(-50deg, #2e2e2e 16px, #000 0);
 }
 
 
@@ -217,7 +220,7 @@ p {
     height:100px;
     position:relative;
     left:0px;
-    background: linear-gradient(to left bottom, #2D2D30 49%, #007ACC 50%);
+    background: linear-gradient(to left bottom, #2e2e2e 49%, #2d6273 50%);
 }
 
 /* Tooltips */
@@ -232,7 +235,7 @@ p {
     visibility: hidden;
     width: 200px;
     background-color: #36393f;
-    color: #2D2D30;
+    color: #2e2e2e;
     text-align: center;
     border-radius: 6px;
     padding: 5px 3px;
